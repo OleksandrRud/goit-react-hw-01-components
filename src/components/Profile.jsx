@@ -1,5 +1,4 @@
 import css from '../components/Profile.module.css';
-import clsx from 'clsx';
 
 function Profile({ username, tag, location, avatar, stats }) {
   return (
