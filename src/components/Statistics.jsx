@@ -1,19 +1,22 @@
 import css from '../components/Statistics.module.css';
-function Statistics({ data }) {
+function Statistics({ title, stats }) {
   return (
-    <section className="statistics">
-      <h2 className="title">Upload stats</h2>
+    <section className={css.statistics}>
+      <h2 className={css.title}>{title}</h2>
 
       <ul className={css.list}>
-        {data.map(item => (
-          <li className="item" key={item.id}>
-            <span className="label">{item.label}</span>
-            <span className="percentage">{item.percentage}</span>
+        {stats.map(item => (
+          <li className={css.item} key={item.id}>
+            <span className={css.label}>{item.label}</span>
+            <span className={css.percentage}>{item.percentage}%</span>
           </li>
         ))}
       </ul>
     </section>
   );
 }
-
+// function randomColor(e) {
+//   css.item.style = 'background-color:e';
+// }
+// const color = Math.floor(Math.random() * 16777215).toString(16);
 export default Statistics;
