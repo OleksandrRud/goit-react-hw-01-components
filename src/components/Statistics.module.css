@@ -1,5 +1,5 @@
 .list {
-  width: 600px;
+  width: 640px;
   list-style: none;
   display: flex;
   padding: 0px;
@@ -10,7 +10,7 @@
   display: block;
 }
 .item {
-  border: 1px solid lightgray;
+  border: 3px solid lightgray;
   padding: 20px;
 }
 

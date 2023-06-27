@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import css from '../components/Profile.module.css';
 
 function Profile({ username, tag, location, avatar, stats }) {
@@ -28,4 +29,11 @@ function Profile({ username, tag, location, avatar, stats }) {
   );
 }
 
+Profile.propTypes = {
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  stats: PropTypes.object.isRequired,
+};
 export default Profile;

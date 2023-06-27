@@ -1,8 +1,10 @@
+import PropTypes from 'prop-types';
 import css from '../components/Statistics.module.css';
+
 function Statistics({ title, stats }) {
   return (
     <section className={css.statistics}>
-      <h2 className={css.title}>{title}</h2>
+      {title && <h2 className={css.title}>{title}</h2>}
 
       <ul className={css.list}>
         {stats.map(item => (
@@ -15,8 +17,15 @@ function Statistics({ title, stats }) {
     </section>
   );
 }
-// function randomColor(e) {
-//   css.item.style = 'background-color:e';
-// }
-// const color = Math.floor(Math.random() * 16777215).toString(16);
+
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number,
+    })
+  ),
+};
 export default Statistics;

@@ -1,0 +1,15 @@
+.transaction_history {
+  text-align: center;
+  width: 640px;
+}
+.head {
+  background-color: lightskyblue;
+  color: white;
+  outline: 1px solid gray;
+}
+.element {
+  outline: 1px solid gray;
+}
+tr:nth-child(2n) {
+  background-color: bisque;
+}
